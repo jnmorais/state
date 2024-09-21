@@ -5,31 +5,25 @@ public class Jogador {
     private JogadorEstado estado;
 
     public Jogador(){
-        this.estado = JogadorEstadoInscrito.getInstance();
-    }
-    public void setEstado(){
-        this.estado = estado;
-    }
-    public boolean inscrever(){
-        return estado.inscrever(this);
+        this.setEstado(JogadorEstadoDisponivel.getInstance());
     }
     public boolean convocar(){
-        return estado.convocar(this);
+        return getEstado().convocar(this);
     }
     public boolean machucar(){
-        return estado.machucar(this);
+        return getEstado().machucar(this);
     }
     public boolean aposentar(){
-        return estado.aposentar(this);
+        return getEstado().aposentar(this);
     }
     public boolean suspender(){
-        return estado.suspender(this);
+        return getEstado().suspender(this);
     }
     public boolean transferir(){
-        return estado.transferir(this);
+        return getEstado().transferir(this);
     }
     public boolean disponibilizar(){
-        return estado.disponibilizar(this);
+        return getEstado().disponibilizar(this);
     }
     public String getNome() {
         return nome;
@@ -37,5 +31,13 @@ public class Jogador {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public JogadorEstado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(JogadorEstado estado) {
+        this.estado = estado;
     }
 }

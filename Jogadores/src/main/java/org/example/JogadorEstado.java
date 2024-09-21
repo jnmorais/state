@@ -2,7 +2,6 @@ package org.example;
 
 public abstract class  JogadorEstado {
 
-    public boolean inscrever(Jogador jogador){return false;}
     public boolean convocar(Jogador jogador){
         return false;
     }
