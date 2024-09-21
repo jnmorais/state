@@ -2,24 +2,21 @@ package org.example;
 
 public abstract class  JogadorEstado {
 
-    public boolean inscrever(){
+    public boolean inscrever(Jogador jogador){return false;}
+    public boolean convocar(Jogador jogador){
         return false;
     }
-    public boolean emprestar(){
+    public boolean machucar(Jogador jogador){
         return false;
     }
-    public boolean machucar(){
+    public boolean aposentar(Jogador jogador){return false;}
+    public boolean suspender(Jogador jogador){
         return false;
     }
-    public boolean regularizar (){
+    public boolean transferir(Jogador jogador){
         return false;
     }
-    public boolean suspender (){
-        return false;
-    }
-    public boolean transferir (){
-        return false;
-    }
+    public boolean disponibilizar(Jogador jogador){return false;}
 }
 
 
